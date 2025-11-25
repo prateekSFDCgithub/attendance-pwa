@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Offline Attendance</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Offline Attendance</h1>
+    <p id="statusText">Loading…</p>
+  </header>
+
+  <main>
+    <section class="top-fields">
+      <label>
+        Girl
+        <select id="girlSelect"></select>
+      </label>
+
+      <label>
+        Month
+        <input type="month" id="monthInput" />
+      </label>
+    </section>
+
+    <section class="attendance-table">
+      <h2>Weeks (1–5)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Week</th>
+            <th>Present?</th>
+          </tr>
+        </thead>
+        <tbody id="weeksBody">
+          <!-- rows injected by JS -->
+        </tbody>
+      </table>
+    </section>
+
+    <button id="saveBtn">Save Offline</button>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
